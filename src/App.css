@@ -106,7 +106,7 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-  width: 9%;
+  width: 12%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -346,11 +346,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+  width: 30%;
+  margin: 0 auto 10px auto;
 }
 .background-image-left {
   top: 28%;
+  filter: hue-rotate(260deg) brightness(1) contrast(0.8) saturate(1.5);
   position: absolute;
   bottom: 0;
   width: 40%;
@@ -406,7 +407,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   width: 0;
   height: 100%;
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(90.21deg, #4bcea4 -5.91%, #093f4b 111.58%);
   top: 0;
   left: 0;
   z-index: -1;
@@ -432,64 +433,68 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
+  background: #1a1a2e;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  margin-bottom: 24px;
-}
-.proj-imgbx::before {
-  content: "";
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  opacity: 0.85;
-  position: absolute;
-  width: 100%;
-  height: 0;
-  transition: 0.4s ease-in-out;
-}
-.proj-imgbx:hover::before {
-  height: 100%;
-}
-.proj-txtx {
-  position: absolute;
-  text-align: center;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  width: 100%;
-}
-.proj-imgbx:hover .proj-txtx {
-  top: 50%;
-  opacity: 1;
-}
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-}
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
+  transition: transform 0.3s ease;
 }
 
-/************ Projects Css ************/
+.proj-imgbx:hover {
+  transform: translateY(-10px);
+}
+
+.proj-imgbx img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.proj-txtx {
+  padding: 20px;
+  text-align: center;
+  background-color: #0d1b2a;
+  border-radius: 0 0 8px 8px;
+}
+
+.proj-txtx h4 {
+  font-size: 22px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.proj-txtx span {
+  color: #c4c4c4;
+  font-size: 16px;
+}
+
+.project-card-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3f72af;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.project-card-btn:hover {
+  background-color: #112d4e;
+}
+
+/************ Contact Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(
+    200deg,
+    rgba(30, 36, 45, 0.7) -10%,
+    rgba(75, 206, 164, 0.7) 150%
+  );
   padding: 60px 0 200px 0;
 }
 .contact img {
-  width: 92%;
+  width: 80%;
 }
 .contact h2 {
   font-size: 45px;
@@ -561,11 +566,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  position: relative;
+  padding: 0 0 50px -10px;
+  overflow: hidden; /* Para asegurarse de que el pseudo-elemento no se desborde */
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("./assets/img/footer-bg.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  filter: hue-rotate(260deg) brightness(1) contrast(0.8) saturate(1.5);
+  z-index: -1;
 }
 .newsletter-bx {
   background: #ffffff;
@@ -591,7 +609,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: llinear-gradient(90.21deg, #4bcea4 -5.91%, #093f4b 111.58%);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -620,7 +638,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0 15px;
 }
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(90.21deg, #4bcea4 -5.91%, #093f4b 111.58%);
   padding: 20px 65px;
   color: #fff;
   font-weight: 500;
@@ -628,7 +646,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 18px;
 }
 .footer img {
-  width: 26%;
+  width: 35%;
+  padding: 1%;
 }
 .footer p {
   font-weight: 400;
