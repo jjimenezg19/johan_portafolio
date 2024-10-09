@@ -258,7 +258,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 8px 10px;
   background: linear-gradient(
     90.21deg,
-    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(60, 20, 39, 0.5) -5%,
     rgba(74, 47, 189, 0.5) 111.58%
   );
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -315,40 +315,80 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+  display: inline-block;
+}
+
+.wrap span {
+  opacity: 1;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.wrap.deleting span {
+  opacity: 0;
 }
 
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  display: inline-block;
 }
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
+
 .skill h2 {
   font-size: 45px;
   font-weight: 700;
+  text-align: center;
+  padding: 30px 0px 15px 160px;
 }
 .skill p {
   color: #b8b8b8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px 0 75px 0;
+  margin: 14px 0 75px 200px;
+  text-align: center;
 }
 .skill-slider {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   position: relative;
+  display: flex;
 }
+.skill-slider .item {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .skill-slider .item img {
-  width: 30%;
-  margin: 0 auto 10px auto;
+  width: 90px; /* Tamaño ajustado del ícono */
+  height: 90px;
+  margin: 0 auto;
+  padding: 5px; /* Espaciado interno para íconos más pequeños */
+  object-fit: contain;
+  background-color: #282828; /* Color de fondo gris claro */
+  border-radius: 8%; /* Fondo circular */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform: translateY(0);
 }
+
+.skill-slider .item img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil al hacer hover */
+}
+
+.skill-slider h5 {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: white; /* Color del texto */
+}
+
+/* Fondo adicional si es necesario */
 .background-image-left {
   top: 28%;
   filter: hue-rotate(260deg) brightness(1) contrast(0.8) saturate(1.5);
@@ -356,12 +396,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
+  left: 0;
 }
 
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
-  background-color: #121212;
+  background-color: #282828;
 }
 .project .row {
   display: flex;
@@ -376,13 +417,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover {
-  transform: translateY(-10px); /* Efecto flotante */
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
 }
 .project h2 {
   font-size: 45px;
   font-weight: 700;
   text-align: center;
+  padding: 0px 0px 15px 0px;
 }
 .project p {
   color: #b8b8b8;
@@ -475,29 +516,31 @@ h2 {
 .project-card p {
   color: #b8b8b8;
   font-size: 16px;
-  text-align: center;
-  padding: 0 20px;
+  padding: 20px 1px;
+  width: 100%;
+  margin: 0px;
+  text-align: revert-layer;
 }
 
 .project-card-btn {
   display: block;
-  margin: 20px auto;
   padding: 10px 20px;
-  background-color: #007bff; /* Color del botón */
   color: white;
-  text-align: center;
-  text-transform: uppercase;
+  text-align: right;
+  text-transform: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
+.project-card-btn:hover svg,
 .project-card-btn:hover {
-  background-color: #0056b3;
+  color: #d69e2e;
 }
 
 .project-card img {
   width: 100%;
   border-radius: 10px 10px 0 0;
+  padding: 10px 0px;
 }
 
 .project-card h2 {
@@ -507,14 +550,49 @@ h2 {
   padding: 10px 0;
 }
 
+.project-card-toolsUsed {
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-card-toolsUsed .tool-item {
+  background-color: #1a1a1a;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d69e2e;
+  font-size: 0.75rem;
+}
+
+.project-card-toolsUsed .tool-item img {
+  margin: -15px 2px -16px -18px;
+  width: 12px;
+  height: 37px;
+}
+
+.project-card-toolsUsed .tool-item span {
+  margin: -15px -16px -16px 1px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+svg {
+  vertical-align: middle;
+  height: 20px;
+  padding: 0px 5px 2px 1px;
+}
+
 /************ Contact Css ************/
 .contact {
   background: linear-gradient(
     200deg,
-    rgba(30, 36, 45, 0.7) -10%,
+    rgb(29, 29, 44) -1%,
     rgba(75, 206, 164, 0.7) 150%
   );
-  padding: 60px 0 200px 0;
+  padding: 60px 0 80px 0;
 }
 .contact img {
   width: 80%;
@@ -605,7 +683,7 @@ h2 {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: hue-rotate(260deg) brightness(1) contrast(0.8) saturate(1.5);
+  filter: hue-rotate(260deg) brightness(1) contrast(1) saturate(1.5);
   z-index: -1;
 }
 .newsletter-bx {
@@ -678,4 +756,114 @@ h2 {
   color: #b8b8b8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/************ Experience Css ************/
+
+.experience {
+  background-color: #1d1d2c; /* Fondo oscuro */
+  padding: 60px 0;
+  color: white;
+}
+
+.experience h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0px 0px 15px 0px;
+}
+
+.experience .row {
+  display: block;
+}
+
+.tag-container {
+  display: flex; /* Flexbox para alinear en fila */
+  justify-content: space-between; /* Coloca los elementos a los extremos */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  padding: 20px;
+  color: white;
+  width: 1300px;
+}
+
+.tag-link:hover {
+  transform: translateX(-10px); /* Animación al hover */
+}
+
+.tag-link {
+  background: linear-gradient(260deg, #0065a6, #1d1d2c); /* Gradiente azul */
+  padding: 15px;
+  flex: 1; /* Hace que este contenedor ocupe el espacio restante */
+  transition: transform 0.3s ease;
+}
+
+.tag-link h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.tag-link p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tag-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  text-align: justify;
+  padding-left: 20px; /* Agrega un pequeño espaciado entre los dos bloques */
+  flex: 1; /* Hace que este contenedor ocupe el espacio restante */
+}
+
+/* Ajustes según la posición izquierda/derecha */
+.container-left {
+  flex-direction: row; /* Alineación normal (izquierda) */
+  text-align: right;
+}
+
+.container-right {
+  flex-direction: row-reverse; /* Alineación inversa (derecha) */
+  text-align: left;
+}
+
+.tag-link,
+.tag-description {
+  padding: 15px;
+  flex: 1;
+}
+
+.tag-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .experience h2 {
+    font-size: 2rem;
+  }
+
+  .tag-container {
+    flex-direction: column; /* Cambia a una columna para pantallas más pequeñas */
+    align-items: flex-start; /* Alinea elementos al inicio */
+  }
+
+  .tag-link,
+  .tag-description {
+    flex: none; /* Evita que se estiren en pantallas pequeñas */
+    padding: 10px 0;
+  }
+
+  .tag-link h4 {
+    font-size: 1.3rem;
+  }
+
+  .tag-link p,
+  .tag-description {
+    font-size: 1rem;
+  }
 }

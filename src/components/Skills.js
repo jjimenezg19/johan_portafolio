@@ -1,6 +1,14 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import reactLogo from "../assets/img/logos/react.svg";
+import javaScriptLogo from "../assets/img/logos/javascript.svg";
+import typeScriptLogo from "../assets/img/logos/typescript.svg";
+import cLogo from "../assets/img/logos/c--4.svg";
+import javaLogo from "../assets/img/logos/java.svg";
+import nodeLogo from "../assets/img/logos/nodejs.svg";
+import htmlLogo from "../assets/img/logos/html.svg";
+import cssLogo from "../assets/img/logos/css.svg";
+import gitLogo from "../assets/img/logos/git.svg";
+import mongoLogo from "../assets/img/logos/mongodb.svg";
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
@@ -33,53 +41,53 @@ export const Skills = () => {
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
+                    <div className="wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Some technologies and tools that I master as a full-stack developer<br></br></p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <p>Technologies and tools I have mastered as a full-stack developer include:<br></br></p>
+                        <div className="owl-carousel owl-theme skill-slider">
                             
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="Image" />
+                                <img src={javaScriptLogo} alt="Image" />
                                 <h5>JavaScript</h5>
                             </div>
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="Image" />
+                                <img src={typeScriptLogo} alt="Image" />
                                 <h5>TypeScript</h5>
                             </div>
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="Image" />
+                                <img src={reactLogo} alt="Image" />
                                 <h5>React</h5>
                             </div>
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Image" />
+                                <img src={nodeLogo} alt="Image" />
                                 <h5>Node.js</h5>
                             </div>
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="Image" />
+                                <img src={htmlLogo} alt="Image" />
                                 <h5>HTML</h5>
                             </div>
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"  alt="Image" />
+                                <img src={cssLogo} alt="Image" />
                                 <h5>CSS</h5>
                             </div>
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Image" />
+                                <img src={javaLogo} alt="Image" />
                                 <h5>Java</h5>
                             </div>
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="Image" />
+                                <img src={cLogo} alt="Image" />
                                 <h5>C#</h5>
                             </div>
                             <div className="item">
-                                <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Image" />
+                                <img src={gitLogo} alt="Image" />
                                 <h5>Git</h5>
                             </div>
                             <div className="item">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="Image" />
-                                <h5>SQL</h5>
+                                <img src={mongoLogo} alt="Image" />
+                                <h5>mongoDB</h5>
                             </div>
                             
-                        </Carousel>
+                        </div>
                     </div>
                 </div>
             </div>

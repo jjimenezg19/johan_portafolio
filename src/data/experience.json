@@ -1,0 +1,20 @@
+[
+  {
+    "institution": "FitStream Solutions",
+    "role": "Fullstack web developer",
+    "date": "May 2024 - Sep 2024",
+    "description": "Fictitious company created for the Project 2 course, which designed and developed a web application for the management of fitness centers. This system facilitates both business administration and client interaction, enabling user and role management, personalized workout routine registration, appointment scheduling, group class access, and payment management with flexible membership options. The project included a detailed requirements session, which was converted into a formal document outlining all use cases and project specifics, simulating a real-world work environment."
+  },
+  {
+    "institution": "Freelancer",
+    "role": "Fullstack web developer",
+    "date": "Apr 2024 - Present",
+    "description": "As a freelancer, I've honed my ability to manage tight deadlines while effectively communicating with clients. This role allows me to explore diverse ideas and gain unique insights from various projects, witnessing how creative visions evolve into successful outcomes."
+  },
+  {
+    "institution": "JAMS Project",
+    "role": "Fullstack web developer",
+    "date": "Jan 2019 - May 2019",
+    "description": "Fictitious company created for the Project 1 Course, where we designed and developed a web application called Educational Seeker. This platform helps parents gather essential information from various educational institutions, assisting them in making well-informed decisions when selecting academic options for their children. It allows users to compare schools based on criteria like academic programs, extracurricular activities, tuition fees, and student performance. The project simulated a real-world environment by conducting a detailed requirements gathering session, transforming it into formal documentation with use cases, technical specifications, and system flows."
+  }
+]
