@@ -300,7 +300,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 25px;
 }
 .banner img {
-  animation: updown 3s linear infinite;
+  animation: updown 4s linear infinite;
+  width: 70%;
 }
 @keyframes updown {
   0% {
@@ -777,6 +778,81 @@ svg {
   display: block;
 }
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .experience h2 {
+    font-size: 2rem;
+  }
+
+  .tag-container {
+    flex-direction: column; /* Cambia a una columna para pantallas más pequeñas */
+    align-items: flex-start; /* Alinea elementos al inicio */
+  }
+
+  .tag-link,
+  .tag-description {
+    flex: none; /* Evita que se estiren en pantallas pequeñas */
+    padding: 10px 0;
+  }
+
+  .tag-link h4 {
+    font-size: 1.3rem;
+  }
+
+  .tag-link p,
+  .tag-description {
+    font-size: 1rem;
+  }
+}
+
+/************ Education Css ************/
+
+.education {
+  background-color: #1d1d2c; /* Fondo oscuro */
+  padding: 60px 0;
+  color: white;
+}
+
+.education h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0px 0px 15px 0px;
+}
+
+.education .row {
+  display: block;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .education h2 {
+    font-size: 2rem;
+  }
+
+  .tag-container {
+    flex-direction: column; /* Cambia a una columna para pantallas más pequeñas */
+    align-items: flex-start; /* Alinea elementos al inicio */
+  }
+
+  .tag-link,
+  .tag-description {
+    flex: none; /* Evita que se estiren en pantallas pequeñas */
+    padding: 10px 0;
+  }
+
+  .tag-link h4 {
+    font-size: 1.3rem;
+  }
+
+  .tag-link p,
+  .tag-description {
+    font-size: 1rem;
+  }
+}
+
+/************ Tag Css ************/
+
 .tag-container {
   display: flex; /* Flexbox para alinear en fila */
   justify-content: space-between; /* Coloca los elementos a los extremos */
@@ -839,31 +915,4 @@ svg {
   font-size: 1rem;
   line-height: 1.6;
   text-align: left;
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-  .experience h2 {
-    font-size: 2rem;
-  }
-
-  .tag-container {
-    flex-direction: column; /* Cambia a una columna para pantallas más pequeñas */
-    align-items: flex-start; /* Alinea elementos al inicio */
-  }
-
-  .tag-link,
-  .tag-description {
-    flex: none; /* Evita que se estiren en pantallas pequeñas */
-    padding: 10px 0;
-  }
-
-  .tag-link h4 {
-    font-size: 1.3rem;
-  }
-
-  .tag-link p,
-  .tag-description {
-    font-size: 1rem;
-  }
 }

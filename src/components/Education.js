@@ -20,7 +20,7 @@ export const Education = () => {
     ];
 
     return (
-        <section className="experience" id="experience">
+        <section className="education" id="education">
             <Container>
                 <Row>
                     <Col size={12}>

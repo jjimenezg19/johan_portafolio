@@ -64,6 +64,7 @@ export const Projects = () => {
           title: `Node.js`,
           icon: nodeIcon,
         }],
+      link: "https://github.com/jjimenezg19/GymApp.git",
     },
     {
       title: "Latino Transit Solutions",
@@ -86,6 +87,7 @@ export const Projects = () => {
           title: `TypeScript`,
           icon: typeScriptIcon,
         }],
+      link: "https://github.com/LatinoTransitSolutions",
     },
     {
       title: "Educational Seeker",
@@ -108,6 +110,7 @@ export const Projects = () => {
           title: `MongoDB`,
           icon: mongoIcon,
         }],
+      link: "https://github.com/jjimenezg19/Educational_Seeker.git",
     },
   ];
 

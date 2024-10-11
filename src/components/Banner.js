@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import 'animate.css';
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/astronaut.png";
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -59,8 +59,9 @@ export const Banner = () => {
                         </h1>
                         <p>Dynamic and organized Full-Stack Software Developer with a solid background in IT support.</p>
                         <p>My academic and work experience journey have honed my quick problem-solving abilities, strong communication skills, and unwavering commitment to meeting deadlines.</p>
-                        <button onClick={() => console.log('connect')}>Contact me! <ArrowRightCircle size={25}/></button>
-                    </Col>
+                        <button onClick={() => window.location.href = '#connect'}>
+                            Let's talk! <ArrowRightCircle size={25} />
+                        </button>                    </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Img"/>
                     </Col>
