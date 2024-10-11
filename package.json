@@ -1,7 +1,7 @@
 {
   "name": "johan_portafolio",
   "version": "0.1.0",
-  "homepage": "hhttps://jjimenezg19.github.io/johan_portafolio/",
+  "homepage": "https://jjimenezg19.github.io/johan_portafolio/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
