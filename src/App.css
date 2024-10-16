@@ -979,3 +979,21 @@ svg {
     padding: 0 150px; /* Espaciado lateral en pantallas grandes */
   }
 }
+
+@media (max-width: 768px) {
+  .proj-tx h4 {
+    font-size: 18px; /* Tamaño de fuente más pequeño para títulos de proyectos */
+  }
+}
+
+@media (max-width: 480px) {
+  .proj-tx h4 {
+    font-size: 16px; /* Aún más pequeño en móviles */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%; /* Hacer que las tarjetas ocupen el ancho completo */
+  }
+}
