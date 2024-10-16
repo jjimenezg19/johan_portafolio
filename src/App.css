@@ -916,3 +916,59 @@ svg {
   line-height: 1.6;
   text-align: left;
 }
+
+/************ Media Queries ************/
+@media (max-width: 768px) {
+  /* Ajustes para pantallas pequeñas */
+
+  .skill h2,
+  .project h2 {
+    /* Títulos */
+    font-size: 32px; /* Tamaño de fuente más pequeño */
+  }
+
+  .skill p,
+  .project p {
+    /* Textos */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+    margin: 10px 0; /* Espaciado reducido */
+  }
+
+  .skill-slider {
+    /* Contenedor del slider */
+    flex-direction: column; /* Cambiar a columna */
+    align-items: center; /* Centrar contenido */
+    padding: 0 10px; /* Espaciado horizontal */
+  }
+
+  .skill-slider .item {
+    /* Elementos dentro del slider */
+    width: 100%; /* Asegura que los elementos ocupen el 100% */
+    margin-bottom: 20px; /* Espacio entre items */
+  }
+
+  .skill-slider .item img {
+    /* Imágenes de habilidades */
+    width: 60px; /* Reducir el tamaño de las imágenes */
+    height: 60px;
+  }
+
+  .background-image-left {
+    /* Fondo adicional para skills */
+    width: 100%; /* Cambiar a ancho completo */
+    top: 0; /* Ajustar la posición */
+    z-index: -4; /* Asegurarse de que esté detrás del contenido */
+  }
+
+  .project .row {
+    /* Contenedor de proyectos */
+    flex-direction: column; /* Cambiar a columna */
+    align-items: center; /* Centrar contenido */
+  }
+
+  .project-card {
+    /* Tarjetas de proyecto */
+    width: 90%; /* Ancho más pequeño para tarjetas */
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+  }
+}
